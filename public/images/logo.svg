@@ -1,0 +1,11 @@
+<svg class="vector" width="300px" height="300px" xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1" style="width: 300px; height: 300px; stroke: rgb(0, 0, 0); stroke-width: 10; fill: none; stroke-linecap: butt; stroke-linejoin: miter;">
+	<g transform="translate(0,0)">
+		<path id="layer_3" d="" style="stroke: rgb(204, 204, 204);"></path><path id="layer_2" d="" style="stroke: rgb(153, 153, 153);"></path>
+		<path id="layer_1" d="M60,60 L60,60 L240,60 L240,240 L60,240 L60,60 M150,90 L150,90 L90,210 L210,210 L150,90 M90,150 L90,150 L210,150 M75,120 A15,30 0 0,1 90,150 A-15,30 0 0,1 75,180 " style="stroke: white;"></path>
+	</g>
+	<g>
+		<path id="mirror_layer_3" d="" transform="translate(300,300),scale(-1,-1)" style="stroke: rgb(204, 204, 204);"></path>
+		<path id="mirror_layer_2" d="" transform="translate(300,300),scale(-1,-1)" style="stroke: rgb(153, 153, 153);"></path>
+		<path id="mirror_layer_1" d="M60,60 L60,60 L240,60 L240,240 L60,240 L60,60 M150,90 L150,90 L90,210 L210,210 L150,90 M90,150 L90,150 L210,150 M75,120 A15,30 0 0,1 90,150 A-15,30 0 0,1 75,180 " transform="translate(300,300),scale(-1,-1)" style="stroke: white;"></path>
+	</g>
+</svg>
