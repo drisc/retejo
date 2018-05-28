@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../retejo');
 var debug = require('debug')('drisc.io:server');
 var http = require('http');
 
