@@ -1,5 +1,142 @@
+/*
+  Global
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro')
+*
+  box-sizing border-box
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+html
+  color #eee
+  background-color #212121
+  min-width 250px
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-a
-  color: #00B7FF
+  
+  line-height 1em
+  font-family 'Source Sans Pro', 'Open Sans', sans-serif
+::selection
+  background #FF9933
+
+::-moz-selection
+  background #FF9933
+
+::-webkit-input-placeholder
+  text-align center
+h1, h2, h3, h4, h5, h6
+  line-height 1em!important
+  padding-bottom 0
+a:link, a:visited, a:active 
+  color #eee
+  text-decoration none
+a:hover 
+    color #FF9933!important
+    text-decoration underline
+    -o-transition .2s
+    -ms-transition .2s
+    -moz-transition .2s
+    -webkit-transition .2s
+    transition .2s
+/*
+  Navigation
+*/
+.nav
+  display grid
+  grid-template-columns 150px auto 150px
+  grid-template-rows 50px
+  color #fff
+  text-decoration none
+  li 
+    float left
+    list-style-type none
+  width 100%
+  height 50px
+  position relative
+  background #212121
+  line-height normal
+  text-align center
+  a:link 
+    list-style none
+    color #fff
+    text-decoration none
+  a:hover 
+    color #FF9933!important
+    text-decoration underline
+    -o-transition .2s
+    -ms-transition .2s
+    -moz-transition .2s
+    -webkit-transition .2s
+    transition .2s  
+.nav-list
+  display none
+  @media only screen and (min-width: 600px)
+    display block
+    grid-column-start 3
+    grid-column-end 3
+    grid-row-start 1
+    grid-row-end 1
+    justify-self right
+    align-self center
+.nav-item
+  padding-right 10px
+  li
+    width auto  
+  //display none
+.logo
+  grid-column-start 2
+  grid-column-end 2
+  grid-row-start 1
+  grid-row-end 1
+  width 50px
+  justify-self center
+  align-self center
+  
+/*
+  Site Layout
+*/
+.content
+  width 100%
+  padding 0 5%
+
+/*
+  About
+*/
+.avatar
+  img
+    display block
+    border-radius 250px 0 250px 250px
+    margin 0 auto
+    padding 24px
+    max-height 350px
+    -webkit-filter grayscale(70%)
+    filter grayscale(70%)
+
+/*
+  Footer
+*/
+footer
+  display grid
+  grid-template-columns 100px auto 100px
+  grid-template-rows 50px
+  width 100%
+  padding-top 10px
+  padding-bottom 10px
+  color #999999
+  //background-color #292F33
+  text-align center
+  float left
+  a:link,a:active, a:hover, a:visited
+    color #999999
+.footer-home
+  grid-column-start 1
+  grid-column-end 1
+  grid-row-start 1
+  grid-row-end 1
+  justify-self left
+  align-self center
+.footer-date
+  grid-column-start 3
+  grid-column-end 3
+  grid-row-start 1
+  grid-row-end 1
+  justify-self right
+  align-self center  
