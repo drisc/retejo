@@ -21,6 +21,11 @@ app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function (req, res, next) {
+    res.header('X-powered-by', 'Retejo (https://drisc.io/retejo');
+  next();
+});
+
 app.use('/', publicRouter);
 app.use('/blog', publicRouter);
 app.use('/about', publicRouter);
