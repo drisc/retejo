@@ -1,7 +1,14 @@
+include tidbits/nav
+include tidbits/footer
+
 doctype html
 html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    div(class='container')
+      +nav
+      div(class='content')
+        block content
+      +footer
