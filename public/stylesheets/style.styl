@@ -29,13 +29,20 @@ a:link, a:visited, a:active
   color #eee
   text-decoration none
 a:hover 
-    color #FF9933!important
-    text-decoration underline
-    -o-transition .2s
-    -ms-transition .2s
-    -moz-transition .2s
-    -webkit-transition .2s
-    transition .2s
+  color #FF9933!important
+  text-decoration underline
+  -o-transition .2s
+  -ms-transition .2s
+  -moz-transition .2s
+  -webkit-transition .2s
+  transition .2s
+button
+  width 50px
+  height 30px
+  margin 10px
+  color #eee
+  background-color green
+  border none
 /*
   Navigation
 */
@@ -99,6 +106,35 @@ a:hover
   grid-template-rows auto 40px
   width 100%
   padding 0 5%
+  
+/*
+  Blog · Post Viewer
+*/
+
+/*
+  Blog · Post Editor
+*/
+.post-editor
+  width 100%
+  grid-column-start 2
+  grid-column-end 2
+  grid-row-start 1
+  grid-row-end 1
+  justify-self center
+  align-self center
+.post-title-field
+  padding 10px
+  input
+    background-color #212121
+    border 0
+    height 40px
+.post-content-field
+  padding 10px
+  textarea
+    background-color #212121
+    border 0
+    height 200px
+    width 100%
 
 /*
   About
@@ -109,14 +145,34 @@ a:hover
   
 
 .avatar
+  padding 24px
+  grid-column-start 2
+  grid-column-end 2
+  grid-row-start 1
+  grid-row-end 1
+  justify-self center
+  align-self center
   img
-    display block
+    display inline-block
     border-radius 250px 0 250px 250px
+    border 0px solid white
+    max-height 250px
     margin 0 auto
-    padding 24px
-    max-height 350px
     -webkit-filter grayscale(70%)
     filter grayscale(70%)
+    -o-transition .5s
+    -ms-transition .5s
+    -moz-transition .5s
+    -webkit-transition .5s
+    transition .5s
+  img:hover
+    -webkit-filter grayscale(0%)
+    filter grayscale(0%)
+    -o-transition .5s
+    -ms-transition .5s
+    -moz-transition .5s
+    -webkit-transition .5s
+    transition .5s
 
 /*
   Footer
@@ -134,14 +190,7 @@ footer
   float left
   a:link,a:active, a:hover, a:visited
     color #999999
-.footer-home
-  grid-column-start 1
-  grid-column-end 1
-  grid-row-start 1
-  grid-row-end 1
-  justify-self left
-  align-self center
-.footer-date
+.footer-misc
   grid-column-start 2
   grid-column-end 2
   grid-row-start 1
