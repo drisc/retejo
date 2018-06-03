@@ -20,4 +20,11 @@ router.get('/about', function(req, res, next) {
   res.render('about', {title: 'About'})
 });
 
+// Retejo
+router.get('/retejo', function(req, res, next) {
+  res.render('tidbits/post', {
+    title: 'Retejo',
+    body: 'Retejo | Website built on Node.js'
+  })
+});
 module.exports = router;
