@@ -1,12 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var stylus = require('stylus');
+var createError = require('http-errors'),
+    express = require('express'),
+    path = require('path'),
+    bodyParser = require('body-parser'),
+    cookieParser = require('cookie-parser'),
+    logger = require('morgan'),
+    stylus = require('stylus');
 
-var publicRouter = require('./routes/public');
-var privateRouter = require('./routes/private');
+var publicRouter = require('./routes/public'),
+    privateRouter = require('./routes/private');
 
 var app = express();
 
@@ -16,7 +17,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -29,7 +30,9 @@ app.use(function (req, res, next) {
 app.use('/', publicRouter);
 app.use('/blog', publicRouter);
 app.use('/about', publicRouter);
+app.use('/retejo', publicRouter);
 app.use('/login', privateRouter);
+app.use('/blog/new', privateRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
