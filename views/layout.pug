@@ -6,6 +6,21 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    // Multi Size ICO (Modern Browsers)
+    link(rel='icon', type='image/x-icon', sizes='16x16 32x32', href='/images/favicons/favicon.ico')
+    // Old Chrome
+    link(rel='icon', href='/images/favicons/favicon-32.png', sizes='32x32')
+    // Chrome for Android
+    link(rel='manifest', href='/images/favicons/manifest.json')
+    link(rel='icon', sizes='192x192', href='/images/favicons/favicon-192.png')
+    // Apple Devices
+    link(rel='apple-touch-icon', sizes='152x152', href='/images/favicons/favicon-152-precomposed.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/images/favicons/favicon-144-precomposed.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/images/favicons/favicon-120-precomposed.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/images/favicons/favicon-114-precomposed.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/images/favicons/favicon-180-precomposed.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/images/favicons/favicon-72-precomposed.png')
+    link(rel='apple-touch-icon', href='/images/favicons/favicon-57.png')
   body
     div(class='container')
       +nav
