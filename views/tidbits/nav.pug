@@ -1,8 +1,13 @@
 mixin nav
   nav(class='nav')
-    img.logo(src='/' + 'images/logo.svg')
+    img.logo(src='images/logo.svg')
     ul.nav-list
-      a(href='/blog')
-        li.nav-item Blog
-      a(href='/about')
-        li.nav-item About
+      li.nav-item
+        a(href='/art') Art
+      li.nav-item
+        a(href='/writing') Writing
+      li.nav-item
+        a(href='/about') About
+      li.nav-item
+        a(href='http://webring.xxiivv.com/' title='Webring')
+         img.webring(src='images/icon.white.svg' alt='Webring')
