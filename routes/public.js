@@ -19,7 +19,7 @@ router.get('/art', function(req, res, next) {
 });
 // Writing
 router.get('/writing', function(req, res, next) {
-  res.render('blog', {
+  res.render('writing', {
     title: 'Writing'
   });
 });

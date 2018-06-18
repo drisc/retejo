@@ -4,7 +4,7 @@ var createError = require('http-errors'),
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
     logger = require('morgan'),
-    stylus = require('stylus'),;
+    stylus = require('stylus');
 
 var publicRouter = require('./routes/public'),
     privateRouter = require('./routes/private');
