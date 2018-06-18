@@ -6,6 +6,8 @@
   box-sizing border-box
   -moz-box-sizing border-box
   -webkit-box-sizing border-box
+*:focus
+  outline none
 html
   color #eee
   background-color #212121
@@ -29,8 +31,7 @@ a:link, a:visited, a:active
   color #eee
   text-decoration none
 a:hover 
-  color #FF9933!important
-  text-decoration underline
+  color #F93
   -o-transition .2s
   -ms-transition .2s
   -moz-transition .2s
@@ -48,7 +49,7 @@ button
 */
 .nav
   display grid
-  grid-template-columns 150px auto 150px
+  grid-template-columns 250px auto 250px
   grid-template-rows 50px
   color #fff
   text-decoration none
@@ -61,18 +62,6 @@ button
   background #212121
   line-height normal
   text-align center
-  a:link 
-    list-style none
-    color #fff
-    text-decoration none
-  a:hover 
-    color #FF9933!important
-    text-decoration underline
-    -o-transition .2s
-    -ms-transition .2s
-    -moz-transition .2s
-    -webkit-transition .2s
-    transition .2s  
 .nav-list
   display none
   @media only screen and (min-width: 600px)
@@ -86,7 +75,7 @@ button
 .nav-item
   padding-right 10px
   li
-    width auto  
+    width auto
   //display none
 .logo
   grid-column-start 2
@@ -96,6 +85,16 @@ button
   width 50px
   justify-self center
   align-self center
+.webring
+  height 25px
+  margin-top -3px
+a:hover .webring
+  filter invert(.5) sepia(1) saturate(5)
+  -o-transition .2s
+  -ms-transition .2s
+  -moz-transition .2s
+  -webkit-transition .2s
+  transition .2s
   
 /*
   Site Layout
@@ -138,7 +137,7 @@ button
     border 0
     width 100%
     height 24px
-    font-size 24px
+    font-size 22px
     text-align center
     ::placeholder
       text-align center
@@ -149,7 +148,8 @@ button
   textarea
     color #c8c1a9
     background-color #212121
-    border 1px solid #2e2e2e
+    //border 1px solid #2e2e2e
+    border 0
     height 30em
     width 100%
     font-size 16px
@@ -181,25 +181,26 @@ button
   align-self center
   img
     display inline-block
-    border-radius 250px 0 250px 250px
+    border-radius 230px 48px 230px 48px
     border 0px solid white
     max-height 250px
     margin 0 auto
     -webkit-filter grayscale(70%)
     filter grayscale(70%)
-    -o-transition .5s
-    -ms-transition .5s
-    -moz-transition .5s
-    -webkit-transition .5s
-    transition .5s
+    -o-transition .2s
+    -ms-transition .2s
+    -moz-transition .2s
+    -webkit-transition .2s
+    transition .2s
   img:hover
+    border-radius 48px 230px 48px 230px
     -webkit-filter grayscale(0%)
     filter grayscale(0%)
-    -o-transition .5s
-    -ms-transition .5s
-    -moz-transition .5s
-    -webkit-transition .5s
-    transition .5s
+    -o-transition .2s
+    -ms-transition .2s
+    -moz-transition .2s
+    -webkit-transition .2s
+    transition .2s
 
 /*
   Footer
@@ -223,4 +224,4 @@ footer
   grid-row-start 1
   grid-row-end 1
   justify-self center
-  align-self center  
+  align-self center
