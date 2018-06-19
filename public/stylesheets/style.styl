@@ -45,26 +45,58 @@ button
   background-color green
   border none
 /*
+  Login
+*/
+.login-content
+  grid-column-start 2
+  grid-column-end 2
+  grid-row-start 1
+  grid-row-end 1
+  width 50%
+  padding-bottom 15px
+  margin 0 auto
+  text-align center
+.login-field
+  padding 10px 0 0 0
+.login-field input
+  height 25px
+  margin 0 auto 
+  background-color black
+  border #eee solid 1px
+  border-radius 0
+.login-actions
+  height 25px
+  padding 10px
+.login-actions input
+  height 25px
+  margin 0 auto
+  text-align center
+
+/*
   Navigation
 */
 .nav
   display grid
-  grid-template-columns 250px auto 250px
-  grid-template-rows 50px
-  color #fff
-  text-decoration none
-  li 
-    float left
-    list-style-type none
-  width 100%
-  height 50px
-  position relative
-  background #212121
-  line-height normal
-  text-align center
+  grid-template-columns 10px auto 10px
+  grid-template-rows 75px
+  @media only screen and (min-width: 990px)
+    display grid
+    grid-template-columns 250px auto 250px
+    grid-template-rows 50px
+    color #fff
+    text-decoration none
+    li 
+      float left
+      list-style-type none
+    width 100%
+    height 50px
+    position relative
+    background #212121
+    line-height normal
+    text-align center
 .nav-list
   display none
-  @media only screen and (min-width: 600px)
+  @media only screen and (min-width: 990px)
     display block
     grid-column-start 3
     grid-column-end 3
@@ -72,19 +104,25 @@ button
     grid-row-end 1
     justify-self right
     align-self center
+.nav-list-dropdown
+  display none
+  position absolute
+  min-width 160px
+  padding 5px 10px
+  z-index 5
 .nav-item
   padding-right 10px
   li
     width auto
   //display none
 .logo
-  grid-column-start 2
-  grid-column-end 2
-  grid-row-start 1
-  grid-row-end 1
-  width 50px
+  grid-column 2
+  grid-row 1
+  width 75px
   justify-self center
   align-self center
+  @media only screen and (min-width: 990px)
+    width 50px
 .webring
   height 25px
   margin-top -3px
@@ -136,7 +174,7 @@ a:hover .webring
     background-color #212121
     border 0
     width 100%
-    height 24px
+    height 3em
     font-size 22px
     text-align center
     ::placeholder

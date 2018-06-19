@@ -1,10 +1,13 @@
 extends layout
 
 block content
-  h1 Login
+  .login-content
+    h1 Login
 
-  form(action='/login', method='POST')
-    p
-      input(type='text', name='user', value='', placeholder='username')
-      input(type='password', name'password', value='', placeholder='password')
-      input(type='submit', value='Submit')
+    form(action='/login', method='POST')
+      .login-field
+        input(type='text', name='user', value='', placeholder='username')
+      .login-field
+        input(type='password', name'password', value='', placeholder='password')
+      .login-actions
+        button(type='submit') Login

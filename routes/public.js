@@ -34,6 +34,12 @@ router.get('/retejo', function(req, res, next) {
   res.render('tidbits/post', {
     title: 'Retejo',
     body: 'Retejo | Website built on Node.js'
-  })
+  });
 });
+
+// Login
+router.get('/login', function(req, res) {
+  res.render('login', { title: 'Login'});
+});
+
 module.exports = router;
