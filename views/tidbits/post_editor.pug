@@ -1,0 +1,8 @@
+mixin post_editor
+  .post-editor
+    form(method='POST' action='/writing')
+      div.post-title-field
+        input#title(type='text', placeholder='· title ·', name='title')
+      div.post-content-field
+        textarea#content(type='text', placeholder='· content ·', name='content')
+        button(type='submit') Post
