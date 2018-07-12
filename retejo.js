@@ -30,6 +30,7 @@ if ('development' == retejo.get('env')) {
 retejo.get('/', publicRouter);
 retejo.get('/writing', publicRouter);
 retejo.get('/about', publicRouter);
+retejo.get('/art', publicRouter);
 
 // Private Routes
 retejo.get('/login', privateRouter);
