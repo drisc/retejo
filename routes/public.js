@@ -24,6 +24,16 @@ router.get('/writing', function(req, res) {
         title: 'Writing',
     });
 });
+// Wiki
+router.get('/wiki', function(req, res) {
+    res.render('wiki', {title: 'Wiki'});
+});
+router.get('/wiki/:wikiItem', function(req, res) {
+    res.render('wiki_template', {
+        title: 'Wiki | ',
+        body: 'Something'
+    });
+});
 
 // About
 router.get('/about', function(req, res) {

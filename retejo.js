@@ -29,6 +29,8 @@ if ('development' == retejo.get('env')) {
 // Public Routes
 retejo.get('/', publicRouter);
 retejo.get('/writing', publicRouter);
+retejo.get('/wiki', publicRouter);
+retejo.get('/wiki/:wikiItem', publicRouter);
 retejo.get('/about', publicRouter);
 retejo.get('/art', publicRouter);
 

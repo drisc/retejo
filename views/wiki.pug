@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .content
+    div.wiki-header
+     // img(src='images/headers/wiki_header.svg')
+    ul.catagories
+      li.wiki-item
+        a(href='/wiki/library')
+          img(src='/images/icons/book.svg')
+          span.wiki-label Libsis
+          span.wiki-desc Librarians • Paper Gods
+      li.wiki-item
+        a(href='/wiki/devices')
+          img(src='/images/icons/mini.svg')
+          span.wiki-label Straal
+          span.wiki-desc The Constellation
+      li.wiki-item
+        a(href='/wiki/humes')
+          img(src='/images/icons/humes.svg')
+          span.wiki-label Humes
+          span.wiki-desc Environmental Data
+      li.wiki-item
+        a(href='/wiki/retejo')
+          img(src='/images/icons/retejo.svg')
+          span.wiki-label Retejo
+          span.wiki-desc Personal Expression Platform
+      li.wiki-item
+        a(href='/wiki/vervatem')
+          img(src='/images/icons/vervatem.svg')
+          span.wiki-label Vervatem
+          span.wiki-desc Social Terminal
