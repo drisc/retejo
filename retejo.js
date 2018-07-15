@@ -28,11 +28,13 @@ if ('development' == retejo.get('env')) {
 
 // Public Routes
 retejo.get('/', publicRouter);
+retejo.get('/art', publicRouter);
+retejo.get('/art/:artItem', publicRouter);
 retejo.get('/writing', publicRouter);
+retejo.get('/writing/:writingItem', publicRouter);
 retejo.get('/wiki', publicRouter);
 retejo.get('/wiki/:wikiItem', publicRouter);
 retejo.get('/about', publicRouter);
-retejo.get('/art', publicRouter);
 
 // Private Routes
 retejo.get('/login', privateRouter);
