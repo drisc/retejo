@@ -83,7 +83,7 @@ button
   grid-template-rows 75px
   @media only screen and (min-width: 600px)
     display grid
-    grid-template-columns 250px auto 250px
+    grid-template-columns 280px auto 280px
     grid-template-rows 75px
     color #fff
     text-decoration none
@@ -256,7 +256,7 @@ span.wiki-label
     display inline-block
     border-radius 230px 48px 230px 48px
     border 0px solid white
-    width 50vw
+    width 35vw
     margin 0 auto
     -webkit-filter grayscale(70%)
     filter grayscale(70%)
@@ -274,6 +274,12 @@ span.wiki-label
     -moz-transition .2s
     -webkit-transition .2s
     transition .2s
+  @media only screen and (max-width: 1000px)
+    img
+      width 50vw
+  @media only screen and (max-width: 600px)
+    img
+      width 70vw
 /*
   Footer
 */
