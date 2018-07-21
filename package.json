@@ -18,7 +18,8 @@
     "path": "^0.12.7",
     "pug": "2.0.0-beta11",
     "request": "^2.87.0",
-    "stylus": "0.54.5"
+    "stylus": "0.54.5",
+    "url": "^0.11.0"
   },
   "scripts": {
     "start": "node retejo.js",
