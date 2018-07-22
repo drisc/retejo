@@ -28,12 +28,8 @@ if ('development' == retejo.get('env')) {
 
 // Public Routes
 retejo.get('/', publicRouter);
-retejo.get('/art', publicRouter);
-retejo.get('/art/:artItem', publicRouter);
-retejo.get('/writing', publicRouter);
-retejo.get('/writing/:writingItem', publicRouter);
-retejo.get('/wiki', publicRouter);
-retejo.get('/wiki/:wikiItem', publicRouter);
+retejo.get('/:section', publicRouter);
+retejo.get('/:section/:sectionItem', publicRouter);
 retejo.get('/about', publicRouter);
 
 // Private Routes
@@ -47,16 +43,16 @@ retejo.set('view engine', 'pug');
 retejo.use(function (res, req, next) {
     next(httpError(404));
 });
-/*
+
 retejo.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
-    res.locals.error = req.retejo.get('env') === 'development' ? err : {};
+    res.locals.error = err;
     // render the error page
     res.status(err.status || 500);
     res.render('error');
 });
-    */
+    
 
 
 // Start HTTP server

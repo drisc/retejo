@@ -1,4 +1,5 @@
-var express = require('express');
+var express = require('express'),
+    url     = require('url');
 
 var router = express.Router();
 
@@ -8,7 +9,7 @@ var router = express.Router();
 
 //  Index
 router.get('/', function(req, res) {
-  res.render('index', {
+  res.render('wiki', {
     title: 'Retejo'
   });
 });
@@ -42,10 +43,17 @@ router.get('/wiki', function(req, res) {
   res.render('wiki', {title: 'Wiki'});
 });
 router.get('/wiki/:wikiItem', function(req, res) {
-  res.render('wiki_template', {
-    title: 'Wiki | ',
-    body: 'Something'
-  });
+  var url = req.protocol + '://' + req.get('host') + req.originalUrl;
+  //if(req.originalUrl == '/wiki/libsis')
+  //  res.render('libsis',{title: 'Wiki | Libsis',url: url});
+  if(req.originalUrl == '/wiki/straal')
+    res.render('wiki/straal',{title: 'Wiki | Straal',url: url});
+  else if(req.originalUrl == '/wiki/humes')
+    res.render('wiki/humes',{title: 'Wiki | Humes',url: url});
+  else if(req.originalUrl == '/wiki/retejo')
+    res.render('wiki/retejo',{title: 'Wiki | Retejo',url: url});
+  else if(req.originalUrl == '/wiki/vervatem')
+    res.render('wiki/vervatem',{title: 'Wiki | Vervatem',url: url});
 });
 
 // About
