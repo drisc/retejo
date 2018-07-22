@@ -1,0 +1,33 @@
+extends ../templates/layout
+
+block content
+  .content
+    div.wiki-header
+      img(src='/images/icons/wiki/humes.svg')
+    //TODO: Make the status bar a mixin and pull data for projects from Arkivo
+    div.wiki-project-status
+      ul.w-p-s-list
+        li.w-p-s-item
+          span VER&nbsp;&bullet;&nbsp; 
+          span 0.0.1
+        li.w-p-s-item
+          span SRC&nbsp;&bullet;&nbsp;
+            a(href='https://github.com/drisc/humes' class='outbound')
+              span GIT
+        li.w-p-s-item
+          span STAT&nbsp;&bullet;&nbsp; 
+          span Research
+    div
+      h1 Humes
+      span Humes is a set of programs designed to run as a distributed environment monitor and control system.
+    div
+      h2 Name
+      p HUMan Environmental Sensor
+    div
+      h2 Purpose
+      p Tracking of weather conditions for realtime data and to inform environmental controls.
+    div
+      h2 Concept
+      p A small circuitboard holding an ESP8266 with a DHT22, TLS2165, BMP180 and a raindrop sensor. <br> All components housed in a small enclosure and placed outside, using a solar panel and on-board battery for power.
+      p Connected to small WiFi node which allows posting of weather information to WeatherUnderground and internal database to inform EC.
+      p Connects to a small Pi Zero W server that hosts routing and control software for the EC.

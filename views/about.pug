@@ -1,15 +1,15 @@
-extends layout
+extends templates/layout
 
 block content
   .avatar
-    img(src='images/cory_b&w.jpg' title='A Person, name of Driscoll')
+    img(src='/images/cory_b&w.jpg' title='A Person, name of Driscoll')
   .about
     h1 Cory Driscoll
     p 23-ish web dude, drinks teas and presses keys
     p(style='text-align: center') Sometimes ventures off the island
     p(style='text-align: center')
       span emails &nbsp; &bullet; &nbsp;
-      a(href='mailto:cory@drisc.io') cory@drisc.io
+      a(href='mailto:mail@drisc.io' class='outbound') mail@drisc.io
       br
-      span twitter &nbsp; &bullet; &nbsp;
-      a(href='https://twitter.com/driscio') @driscio
+      span tweets &nbsp; &bullet; &nbsp;
+      a(href='https://twitter.com/driscio' class='outbound') @driscio

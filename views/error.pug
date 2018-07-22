@@ -1,7 +1,7 @@
-extends layout
+extends templates/layout
 
 block content
   .content
     h1= message
-    h2= error.status
-    pre #{error.stack}
+    h2(style='text-align: center')= error.status
+    //pre #{error.stack}

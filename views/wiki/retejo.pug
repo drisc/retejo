@@ -1,0 +1,27 @@
+extends ../templates/layout
+
+block content
+  .content
+    div.wiki-header
+      img(src='/images/icons/wiki/retejo.svg')
+    //TODO: Make the status bar a mixin and pull data for projects from Arkivo
+    div.wiki-project-status
+      ul.w-p-s-list
+        li.w-p-s-item
+          span V&nbsp;&bullet;&nbsp; 
+          span 0.0.3
+    div
+      h1 Retejo
+      span Retejo is a collection of art, writings and projects that I would like to share with the world. My own personal expression platform.
+    div
+      h2 Project Status
+      p Retejo is currently hosted using node.js and static webpages written in the Pug template language.
+    div
+      h2 Name
+      p Esparonto word for 'Website'.
+    div
+      h2 Purpose
+      p Serve rendered webpages
+    div
+      h2 Concept
+      p Lightweight application which will serve webpages which pull information from flat databases.  Application will eventually be fully independant of node.js and npm.
