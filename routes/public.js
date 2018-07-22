@@ -61,4 +61,10 @@ router.get('/about', function(req, res) {
   res.render('about', {title: 'About'});
 });
 
+//Robots
+router.get('/robots.txt', function(req, res) {
+  res.type('text/plain')
+  res.send("User-agent: *\nDisallow: ");
+});
+
 module.exports = router;
