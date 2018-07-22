@@ -37,12 +37,30 @@ a:hover
   -o-transition .2s
   -ms-transition .2s
   -moz-transition .2s
+  -webkit-slide-transition .2s
+  transition .2s
+// Outbound Links
+a.outbound:after
+  content '↗'
+  font-size 50%
+  position relative
+  opacity 0
+  left -1em
+  -webkit-transition all 250ms
+  transition all 250ms
+  //margin-left -5px
+a.outbound:hover:after
+  opacity 1
+  left 0
+  color #F93
+  -o-transition .2s
+  -ms-transition .2s
+  -moz-transition .2s
   -webkit-transition .2s
   transition .2s
 button
   width 50px
   height 30px
-  margin 10px
   color #eee
   background-color green
   border none
@@ -148,6 +166,7 @@ a:hover .webring
     grid-template-rows auto auto 40px
 
 .content
+  width 100%
   grid-column 2
   grid-row 1
   justify-self center
@@ -158,19 +177,22 @@ a:hover .webring
 */
 .wiki-header
   img
-    width 20%
+    width 20vw
+    display block
     margin 0 auto
+    @media only screen and (max-width:600px)
+      width 50vw
 ul.catagories
   display flex
   flex-wrap wrap
-  max-width 65vw
+  //max-width 65vw
   padding 0
-  margin 0 -10px
+  //margin 0 -10px
   justify-content space-evenly
   list-style-type none
   text-align center
-  @media only screen and (max-width: 500px)
-    justify-content space-around
+  @media only screen and (max-width:600px)
+    max-width 600px
 li.wiki-item
   width 150px
   margin 0 10px
@@ -183,13 +205,33 @@ li.wiki-item
     width 100px
     margin 20px 20px
     float left
-
 span.wiki-label
   display block
-.wiki-desc
-  span
+span.wiki-desc
   display block
   font-size 85%
+.wiki-project-status
+  display grid
+  grid-template-columns 5px auto 5px
+  grid-template-rows 25px
+  width 100%
+  height 25px
+  background-color #282323
+  font-size 1em
+ul.w-p-s-list
+  grid-column 2
+  display flex
+  flex-wrap wrap
+  align-self center
+  justify-content space-evenly
+  list-style-type none
+  margin 0
+  padding 0
+li.w-p-s-item
+  width 110px
+  margin 0
+  text-align center
+  
 
 /*
   Blog · Post Viewer
