@@ -67,4 +67,15 @@ router.get('/robots.txt', function(req, res) {
   res.send("User-agent: *\nDisallow: ");
 });
 
+//Social Redirects
+router.get('/:socal',function(req, res) {
+  var url = req.protocol + '://' + req.get('host') + req.originalUrl;
+  if(req.originalUrl == '/tw')
+    res.status(301).redirect('https://twitter.com/driscio');
+  else if(req.originalUrl == '/gh')
+    res.status(301).redirect('https://github.com/drisc');
+  else if(req.originalUrl == '/ig')
+    res.status(301).redirect('https://instagram.com/_drisc_');
+});
+
 module.exports = router;
