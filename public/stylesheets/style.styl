@@ -50,7 +50,8 @@ a:hover
   transition .2s
 // Outbound Links
 a.outbound
-  padding-left 5px
+  padding-left 10px
+  background-color #000000
 a.outbound:after
   content '↗'
   font-size 50%
@@ -227,7 +228,10 @@ span.wiki-desc
   display grid
   grid-template-columns 5px auto 5px
   grid-template-rows 25px
-  width 27%
+  width 40%
+  max-width 650px
+  min-width 350px
+  margin 0 0 0 auto
   height 25px
   color #212121
   background-color #f9f9f0
@@ -236,6 +240,8 @@ span.wiki-desc
     color #DD7414
   a:hover, a:hover:after
     color #01525D
+  @media only screen and (max-width: 600px)
+    width 100%
 ul.w-p-s-list
   grid-column 2
   display flex
@@ -247,6 +253,7 @@ ul.w-p-s-list
   padding 0
 li.w-p-s-item
   width 110px
+  line-height 150%
   margin 0
   text-align center
   
