@@ -230,18 +230,22 @@ span.wiki-desc
   grid-template-rows 25px
   width 40%
   max-width 650px
-  min-width 350px
+  min-width 282px
   margin 0 0 0 auto
   height 25px
   color #212121
   background-color #f9f9f0
-  font-size 1em
+  font-size 90%
   a:link, a:visited
     color #DD7414
   a:hover, a:hover:after
     color #01525D
   @media only screen and (max-width: 600px)
     width 100%
+    font-size 90%
+  @media only screen and (max-width: 320px)
+    width 100%
+    font-size 50%
 ul.w-p-s-list
   grid-column 2
   display flex
@@ -252,7 +256,7 @@ ul.w-p-s-list
   margin 0
   padding 0
 li.w-p-s-item
-  width 110px
+  width 100px
   line-height 150%
   margin 0
   text-align center
