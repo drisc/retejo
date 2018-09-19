@@ -8,20 +8,20 @@ block content
     div.wiki-project-status
       ul.w-p-s-list
         li.w-p-s-item
-          span V&nbsp;&bullet;&nbsp; 
+          span VER&nbsp;&bullet;&nbsp;
           span 0.0.3
+        li.w-p-s-item
+          span SRC&nbsp;&bullet;&nbsp;
+          a(href='https://github.com/drisc/retejo' class='outbound')
+              span GIT
+        li.w-p-s-item
+          span STATUS&nbsp;&bullet;&nbsp; 
+          span InDev
     div
       h1 Retejo
-      span Retejo is a collection of art, writings and projects that I would like to share with the world. My own personal expression platform.
     div
-      h2 Project Status
-      p Retejo is currently hosted using node.js and static webpages written in the Pug template language.
+      p Retejo is a collection of art, writings and projects that I would like to share with the world. My own personal expression platform.
+      p The site is currently hosted using node.js and static webpages written in the Pug template language.
     div
-      h2 Name
-      p Esparonto word for 'Website'.
-    div
-      h2 Purpose
-      p Serve rendered webpages
-    div
-      h2 Concept
-      p Lightweight application which will serve webpages which pull information from flat databases.  Application will eventually be fully independant of node.js and npm.
+      h2 The Plan
+      p Eventually to be a lightweight application which will serve webpages that pull information from flat databases. While it's' currently written in Node.JS and Pug the final 1.0 version will simply be a router and a renderer which points to template files that watch for new files and build their content when there is an update.
