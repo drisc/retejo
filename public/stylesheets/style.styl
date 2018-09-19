@@ -17,13 +17,18 @@
 *:focus
   outline none
 html
-  color #eee
+  color #EEE
   background-color #212121
   min-width 250px
+  height 100%
 body
   line-height 150%
   font-size 1em
   font-family 'Source Sans Pro', 'Open Sans', sans-serif
+  margin 0
+  padding 0
+  position relative
+  min-height 100%
 
 ::selection
   background #FF9933
@@ -39,7 +44,7 @@ h1, h2, h3, h4, h5, h6
 h1.responsive-text
   font-size: 5vh
 a:link, a:visited, a:active
-  color #eee
+  color #EEE
   text-decoration none
 a:hover
   color #F93
@@ -73,7 +78,7 @@ a.outbound:hover:after
 button
   width 50px
   height 30px
-  color #eee
+  color #EEE
   background-color green
   border none
 /*
@@ -94,7 +99,7 @@ button
   height 25px
   margin 0 auto
   background-color black
-  border #eee solid 1px
+  border #EEE solid 1px
   border-radius 0
 .login-actions
   height 25px
@@ -173,10 +178,12 @@ a:hover .webring
   grid-template-rows auto auto 40px
   width 100%
   padding 0 15vw
+  padding-bottom 60px
   @media only screen and (min-width:200px) and (max-width: 800px)
     grid-template-columns 2px auto 2px
     grid-template-rows auto auto 40px
     padding 0 5%
+    padding-bottom 40px
 
 .content
   width 100%
@@ -235,7 +242,7 @@ span.wiki-desc
   margin 0 0 0 auto
   height 25px
   color #212121
-  background-color #f9f9f0
+  background-color #F9F9F0
   font-size 90%
   a:link, a:visited
     color #DD7414
@@ -283,7 +290,7 @@ li.w-p-s-item
 .post-title-field
   padding 10px
   input
-    color #c8c1a9
+    color #C8C1A9
     background-color #212121
     border 0
     width 100%
@@ -297,7 +304,7 @@ li.w-p-s-item
 .post-content-field
   padding 10px
   textarea
-    color #c8c1a9
+    color #C8C1A9
     background-color #212121
     //border 1px solid #2e2e2e
     border 0
@@ -367,10 +374,12 @@ footer
   grid-template-columns 100px auto 100px
   grid-template-rows 50px
   width 100%
-  padding-top 10px
-  padding-bottom 10px
+  height 50px
+  position absolute
+  bottom 0
+  right 0
+  background-color #2D2D2D
   color #999999
-  //background-color #292F33
   text-align center
   float left
   a:link,a:active, a:hover, a:visited
