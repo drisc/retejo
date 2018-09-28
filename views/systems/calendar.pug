@@ -1,0 +1,28 @@
+extends ../templates/layout
+
+block content
+  .content
+    div.wiki-header
+    div
+      h1 Afiur
+      .under-title 
+        span A Personal Epoch
+    div
+      ul.no-indent
+        li.no-style 1 Year • 10 months
+        li.no-style 1 Month • 4 weeks
+        li.no-style 1 Week • 10 days
+        li.no-style 1 Day • 1 turn of the planet
+
+    div
+      h2 Purpose
+      p The main purpose of this system will be to provide a framework for planning and prediction of interest in working on projects and serving as the primary display format for my time tracker. It's designed to work around way I live and want to spend my time.
+      //I go more in-depth about my process over in <a href="/writing/my-process">this post</a>.
+
+      h2 Defining personal time
+      p A personal epoch starts on the day of birth. The symbol ⊙ or, on systems where the symbol won't render, the string {slf} is used to denote day total and express it as the True number.
+      p Personal time is subjective but for consistancy a day is judged as one turn of the planet with the date line running along the prime meridian. If humanity ever reachs Mars or some other planet the system will stay intact dispite the change in the length of day.
+
+      h4 Calculating the date mathamatically
+      p To find the current date for an epoch simply use the following equation: ⊙Days/10/10/4. The resulting decimal, when read left to right will display the current year, the month which is the number plus one. The last three digits can be converted to show the current date within the month.
+      p Example: ⊙8727/10/10/4 = 21.80175 or Year 21 • Month 9 • Day 7

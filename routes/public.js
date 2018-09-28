@@ -54,6 +54,11 @@ router.get('/wiki/:wikiItem', function(req, res) {
     res.render('wiki/retejo',{title: 'Wiki | Retejo',url: url});
   else if(req.originalUrl == '/wiki/vervatem')
     res.render('wiki/vervatem',{title: 'Wiki | Vervatem',url: url});
+router.get('/systems/:systemItem', function(req, res) {
+  var url = req.protocol + '://' + req.get('host') + req.originalUrl;
+  if(req.originalUrl == '/systems/calendar')
+    res.render('systems/calendar',{title: 'Wiki | Afiur',url: url});
+});
 });
 
 // About
