@@ -1,5 +1,13 @@
 mixin footer
   footer
-    .footer-misc
-      a(href='https://github.com/drisc/') github 
-      span &bullet; 2018
+    .footer-date
+      a(href='/systems/calendar' title='Afiur Date') 
+        span ⊙
+          script.
+            document.write(afiur.date());
+    .footer-licence
+      b
+        a(href='https://creativecommons.org/licenses/by-nc-sa/4.0/') BY-NC-SA 4.0
+    .footer-right
+      b 
+        em Things a'changin
