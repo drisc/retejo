@@ -55,26 +55,8 @@ a:hover
   transition .2s
 // Outbound Links
 a.outbound
-  padding-left 10px
-  background-color #000000
-a.outbound:after
-  content '↗'
-  font-size 50%
-  position relative
-  opacity 0
-  left -1em
-  -webkit-transition all 250ms
-  transition all 250ms
-  //margin-left -5px
-a.outbound:hover:after
-  opacity 1
-  left 0
-  color #F93
-  -o-transition .2s
-  -ms-transition .2s
-  -moz-transition .2s
-  -webkit-transition .2s
-  transition .2s
+  padding 0 10px 0 10px
+  background-color rgba(0,0,0,0.4)
 button
   width 50px
   height 30px
@@ -197,11 +179,13 @@ a:hover .webring
     padding-bottom 40px
 
 .content
-  width 100%
+  width 80%
   grid-column 2
   grid-row 1
   justify-self center
   align-self center
+  @media only screen and (min-width:200px) and (max-width: 800px)
+    width 100%
 
 /*
   Wiki
@@ -242,7 +226,7 @@ span.wiki-desc
   display block
   font-size 85%
 
-// Project Status 
+// Project Status
 .wiki-project-status
   display grid
   grid-template-columns 5px auto 5px
@@ -255,10 +239,9 @@ span.wiki-desc
   color #212121
   background-color #F9F9F0
   font-size 90%
-  a:link, a:visited
-    color #DD7414
-  a:hover, a:hover:after
-    color #01525D
+  a.outbound
+    padding 0 10px 0 10px
+    background-color rgba(0,0,0,0.9)
   @media only screen and (min-width: 600px) and (max-width: 922px)
     width 50vw
   @media only screen and (max-width: 620px)
@@ -338,8 +321,8 @@ li.w-p-s-item
     text-align center
 .social
   width 100%
-  border-radius 10px
-  background #111111
+  border-radius 5px
+  //background #111111
   padding 5px 10px
 
 
