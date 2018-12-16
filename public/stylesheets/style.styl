@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6
   line-height 1em
   padding-bottom 0
 h1.responsive-text
-  font-size: 5vh
+  font-size 5vh
 a:link, a:visited, a:active
   color #EEE
   text-decoration none
@@ -392,13 +392,30 @@ footer
   background-color #2D2D2D
   color #999999
   text-align center
+  font-size 12px
   float left
   a:link,a:active, a:hover, a:visited
     color #999999
-.footer-misc
+.footer-licence
+  grid-column-start 1
+  grid-column-end 1
+  grid-row-start 1
+  grid-row-end 1
+  justify-self left
+  align-self center
+  padding-left 10px
+.footer-date
   grid-column-start 2
   grid-column-end 2
   grid-row-start 1
   grid-row-end 1
   justify-self center
   align-self center
+.footer-right
+  grid-column-start 3
+  grid-column-end 3
+  grid-row-start 1
+  grid-row-end 1
+  justify-self right
+  align-self center
+  padding-right 10px

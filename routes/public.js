@@ -81,6 +81,8 @@ router.get('/:socal',function(req, res) {
     res.status(301).redirect('https://github.com/drisc');
   else if(req.originalUrl == '/ig')
     res.status(301).redirect('https://instagram.com/_drisc_');
+  else if(req.originalUrl == '/fv')
+    res.status(301).redirect('https://social.drisc.io/users/1');
 });
 
 module.exports = router;
