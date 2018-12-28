@@ -92,7 +92,7 @@ router.get('/:socal',function(req, res) {
   else if(req.originalUrl == '/ig')
     res.status(301).redirect('https://instagram.com/_drisc_');
   else if(req.originalUrl == '/fv')
-    res.status(301).redirect('https://social.drisc.io/users/1');
+    res.status(301).redirect('https://merveilles.town/@drisc');
 });
 
 module.exports = router;
