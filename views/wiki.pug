@@ -2,19 +2,20 @@ extends templates/layout
 
 block content
   .content
-    ul.catagories
-      li.wiki-item
-        a(href='/wiki/straal')
-          img(src='/images/icons/wiki/straal.svg')
-          span.wiki-label Straal
-          span.wiki-desc The Constellation
-      li.wiki-item
-        a(href='/wiki/humes')
-          img(src='/images/icons/wiki/humes.svg')
-          span.wiki-label Humes
-          span.wiki-desc Environmental Data
-      li.wiki-item
-        a(href='/wiki/retejo')
-          img(src='/images/icons/wiki/retejo.svg')
-          span.wiki-label Retejo
-          span.wiki-desc Personal Expression Platform
+    .wiki-index-grid
+      .wiki-index-projects
+        h2 Projects
+        <hr>
+        ul
+          li(class='wiki-latest-project') Recent | <a href='/wiki/retejo'>Retejo</a>
+          li <a href='/wiki/humes'>Humes</a>
+          li <a href='/wiki/retejo'>Retejo</a>
+          li <a href='/wiki/sargas'>Sargas</a>
+          li <a href='/wiki/paviderm'>Paviderm</a>
+      .wiki-index-self
+        h2 Self
+        <hr>
+        ul
+          li <a href='/wiki/libsis'>Reading List</a>
+          li <a href='/wiki/bookmarks'>Bookmarks</a>
+          li <a href='/wiki/straal'>Straal</a>

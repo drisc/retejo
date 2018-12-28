@@ -42,18 +42,28 @@ router.get('/writing/:writingItem', function(req, res) {
 router.get('/wiki', function(req, res) {
   res.render('wiki', {title: 'Wiki'});
 });
-router.get('/wiki/:wikiItem', function(req, res) {
+router.get('/wiki/:wikiItem/', function(req, res) {
   var url = req.protocol + '://' + req.get('host') + req.originalUrl;
-  //if(req.originalUrl == '/wiki/libsis')
-  //  res.render('libsis',{title: 'Wiki | Libsis',url: url});
-  if(req.originalUrl == '/wiki/straal')
+  if(req.originalUrl == '/wiki/libsis')
+    res.render('wiki/libsis',{title: 'Wiki | Reading List',url: url});
+  else if(req.originalUrl == '/wiki/straal')
     res.render('wiki/straal',{title: 'Wiki | Straal',url: url});
   else if(req.originalUrl == '/wiki/humes')
     res.render('wiki/humes',{title: 'Wiki | Humes',url: url});
   else if(req.originalUrl == '/wiki/retejo')
     res.render('wiki/retejo',{title: 'Wiki | Retejo',url: url});
-  else if(req.originalUrl == '/wiki/vervatem')
-    res.render('wiki/vervatem',{title: 'Wiki | Vervatem',url: url});
+  else if(req.originalUrl == '/wiki/tools')
+    res.render('wiki/tools',{title: 'Wiki | Tools',url: url});
+  else if(req.originalUrl == '/wiki/sargas')
+    res.render('wiki/sargas',{title: 'Wiki | Sargas',url: url});
+  else if(req.originalUrl == '/wiki/paviderm')
+    res.render('wiki/paviderm',{title: 'Wiki | Paviderm',url: url});
+  else if(req.originalUrl == '/wiki/bookmarks')
+    res.render('wiki/bookmarks',{title: 'Wiki | Bookmarks',url: url});
+  else if(req.originalUrl == '/wiki/photography')
+    res.render('wiki/photography',{title: 'Wiki | Photography',url: url});
+});
+
 router.get('/systems/:systemItem', function(req, res) {
   var url = req.protocol + '://' + req.get('host') + req.originalUrl;
   if(req.originalUrl == '/systems/calendar')

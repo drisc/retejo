@@ -186,10 +186,43 @@ a:hover .webring
   align-self center
   @media only screen and (min-width:200px) and (max-width: 800px)
     width 100%
+  ul
+    list-style-type none
+    margin 0
+    padding 3px
 
 /*
   Wiki
 */
+.wiki-index-grid { 
+  display grid!important
+  grid-template-columns 50% 50%
+  grid-template-rows auto
+  margin 5px 5px 0 0
+  display inline-block
+  top 0 
+}
+.wiki-index-projects {
+  grid-column-start 1
+  grid-column-end 1
+  grid-row-start 1
+  grid-row-end 1
+  justify-self center
+  
+}
+.wiki-index-self {
+  grid-column-start 2
+  grid-column-end 2
+  grid-row-start 1
+  grid-row-end 1
+  justify-self center
+  
+}
+.wiki-index-grid ul { list-style-type:none; padding:2px; }
+.wiki-latest-project { 
+  border-bottom 2px solid #EEE
+}
+
 .wiki-header
   img
     width 20vw
@@ -322,10 +355,7 @@ li.w-p-s-item
 .social
   width 100%
   border-radius 5px
-  //background #111111
   padding 5px 10px
-
-
 .avatar
   padding 24px
   grid-column 2
@@ -360,15 +390,6 @@ li.w-p-s-item
   @media only screen and (max-width: 600px)
     img
       width 70vw
-
-.creators-tbl
-  width 50%
-  text-align center
-  border 2px solid #BBBBBB
-  border-collapse collapse
-  th, td
-    border 1px solid #BBBBBB
-    min-width 150px
 /*
   Footer
 */
