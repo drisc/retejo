@@ -1,5 +1,7 @@
 mixin nav
   nav(class='nav')
+    form(method='GET')
+      input.search(type='text', placeholder='Search' name='wiki')
     a.logo(href='/')
       img.logo(src='/images/logo.svg')
     ul.nav-list
