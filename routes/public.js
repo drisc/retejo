@@ -69,7 +69,6 @@ router.get('/systems/:systemItem', function(req, res) {
   if(req.originalUrl == '/systems/calendar')
     res.render('systems/calendar',{title: 'Wiki | Afiur',url: url});
 });
-});
 
 // About
 router.get('/about', function(req, res) {
