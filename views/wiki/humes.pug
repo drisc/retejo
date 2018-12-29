@@ -4,7 +4,6 @@ block content
   .content
     div.wiki-header
       img(src='/images/icons/wiki/humes.svg')
-    //TODO: Make the status bar a mixin and pull data for projects from Arkivo
     div.wiki-project-status
       ul.w-p-s-list
         li.w-p-s-item
@@ -18,7 +17,9 @@ block content
           span STATUS&nbsp;&bullet;&nbsp; 
           span InDev
     div
-      h1 Humes | Environmental Sensors &amp; Controls
+      h1 Humes
+      .under-title
+        span Environmental Sensors &amp; Controls
       span Humes is a set of programs and hardware designed to run as a distributed environment monitor and control system.
     div
       h2 Computation Nodes
