@@ -9,7 +9,7 @@ var router = express.Router();
 
 //  Index
 router.get('/', function(req, res) {
-  res.render('wiki', {
+  res.render('index', {
     title: 'Retejo'
   });
 });
@@ -27,16 +27,16 @@ router.get('/art/:artItem', function(req, res) {
 });
 
 // Writing
-router.get('/writing', function(req, res) {
+/*router.get('/writing', function(req, res) {
   res.render('writing', {
     title: 'Writing',
   });
 });
 router.get('/writing/:writingItem', function(req, res) {
-  res.render('wiki', {
-    title: 'Writing',
+  res.render('writing/my-process', {
+    title: 'Writing | My Process',
   });
-});
+});*/
 
 // Wiki
 router.get('/wiki', function(req, res) {
@@ -56,8 +56,8 @@ router.get('/wiki/:wikiItem/', function(req, res) {
     res.render('wiki/tools',{title: 'Wiki | Tools',url: url});
   else if(req.originalUrl == '/wiki/sargas')
     res.render('wiki/sargas',{title: 'Wiki | Sargas',url: url});
-  else if(req.originalUrl == '/wiki/paviderm')
-    res.render('wiki/paviderm',{title: 'Wiki | Paviderm',url: url});
+  else if(req.originalUrl == '/wiki/procul')
+    res.render('wiki/paviderm',{title: 'Wiki | Procul',url: url});
   else if(req.originalUrl == '/wiki/bookmarks')
     res.render('wiki/bookmarks',{title: 'Wiki | Bookmarks',url: url});
   else if(req.originalUrl == '/wiki/photography')
