@@ -33,7 +33,7 @@ router.get('/wiki/:wikiItem/', function(req, res) {
   else if(req.originalUrl == '/wiki/sargas')
     res.render('wiki/sargas',{title: 'Wiki | Sargas',url: url});
   else if(req.originalUrl == '/wiki/procul')
-    res.render('wiki/paviderm',{title: 'Wiki | Procul',url: url});
+    res.render('wiki/procul',{title: 'Wiki | Procul',url: url});
   else if(req.originalUrl == '/wiki/bookmarks')
     res.render('wiki/bookmarks',{title: 'Wiki | Bookmarks',url: url});
   else if(req.originalUrl == '/wiki/photography')
