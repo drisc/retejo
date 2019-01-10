@@ -9,34 +9,10 @@ var router = express.Router();
 
 //  Index
 router.get('/', function(req, res) {
-  res.render('index', {
+  res.render('wiki', {
     title: 'Retejo'
   });
 });
-
-// Art
-router.get('/art', function(req, res) {
-  res.render('art', {
-    title: 'Art'
-  });
-});
-router.get('/art/:artItem', function(req, res) {
-  res.render('art', {
-    title: 'Art'
-  });
-});
-
-// Writing
-/*router.get('/writing', function(req, res) {
-  res.render('writing', {
-    title: 'Writing',
-  });
-});
-router.get('/writing/:writingItem', function(req, res) {
-  res.render('writing/my-process', {
-    title: 'Writing | My Process',
-  });
-});*/
 
 // Wiki
 router.get('/wiki', function(req, res) {
