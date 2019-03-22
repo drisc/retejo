@@ -1,0 +1,35 @@
+extends ../templates/layout
+
+block content
+  .content
+    div.wiki-header
+      img(src='/images/icons/wiki/alchemist.svg')
+    div.wiki-project-status
+      ul.w-p-s-list
+        li.w-p-s-item
+          span VER&nbsp;&bullet;&nbsp;
+          span 0.0.1
+        li.w-p-s-item
+          span SRC&nbsp;&bullet;&nbsp;
+          a(href='https://github.com/drisc/retejo' class='outbound')
+              span GIT
+        li.w-p-s-item
+          span STATUS&nbsp;&bullet;&nbsp;
+          span InDev
+    div
+      h1 Alchemist
+    div
+      code What you give me in time and information, I shall transmute into a personal tome.
+    div
+      p The Alchemist is a static wiki generator, designed to read data from a collection of flat file databases and produce a folder filled with HTML documents. It watches the library folder for updates and builds itself once there has been no new activity after 10 minutes.
+
+      h3 Components
+
+      h4 The Library
+      p The source files for the Alchemists knowledge, all stored in flat file databases.
+
+      h4 The Alembic
+      p The site generator, takes all the files from the library and sorts them into categories based on tags or origin database then renders a static HTML site out to a folder.
+
+      h4 The Aqueduct
+      p The link to the outside, a small script which will run and pull in relevant information such as git statistics and other dynamic information
