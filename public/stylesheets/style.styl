@@ -1,15 +1,18 @@
+
+:root
+  --bg #1B1819
+  --color-1 rgba(0,0,0,0.4)
+  --color-2 #EEE
+  --color-3 #212121
+  --color-4 #FFC705
+  --color-5 #FF9933
+  --grey #5D5D5D
+  --soften 5px
+
 /*
   Global
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro')
-/*
-  Fonts
-*/
-@font-face
-  font-family BattalionMono
-  src url(/fonts/BattalionMono-Regular.woff) format('woff'),
-      url(/fonts/BattalionMono-Regular.woff2) format('woff2'),
-      url(/fonts/BattalionMono-Regular.eot) format('eot')
+
 *
   box-sizing border-box
   -moz-box-sizing border-box
@@ -17,23 +20,23 @@
 *:focus
   outline none
 html
-  color #EEE
-  background-color #212121
+  color var(--color-2)
+  background-color var(--bg)
   min-width 250px
   height 100%
 body
-  line-height 150%
+  line-height 140%
   font-size 1em
-  font-family 'Source Sans Pro', 'Open Sans', sans-serif
+  font-family 'SpaceGrotesk', Helvetica, sans-serif
   margin 0
   padding 0
   position relative
   min-height 100%
 
 ::selection
-  background #FF9933
+  background var(--color-5)
 ::-moz-selection
-  background #FF9933
+  background var(--color-5)
 
 ::-webkit-input-placeholder
   text-align center
@@ -44,23 +47,19 @@ h1, h2, h3, h4, h5, h6
 h1.responsive-text
   font-size 5vh
 a:link, a:visited, a:active
-  color #EEE
+  color var(--color-2)
   text-decoration none
 a:hover
-  color #F93
-  -o-transition .2s
-  -ms-transition .2s
-  -moz-transition .2s
-  -webkit-slide-transition .2s
+  color var(--color-4)
   transition .2s
 // Outbound Links
 a.outbound
   padding 0 10px 0 10px
-  background-color rgba(0,0,0,0.4)
+  background-color var(--color-1)
 button
   width 50px
   height 30px
-  color #EEE
+  color var(--color-2)
   background-color green
   border none
 /*
@@ -69,7 +68,7 @@ button
 .under-title
   margin-top -18px
   font-size 85%
-  color #5D5D5D
+  color var(--grey)
 ul.no-indent
   margin-left -40px
 li.no-style
@@ -92,7 +91,7 @@ li.no-style
   height 25px
   margin 0 auto
   background-color black
-  border #EEE solid 1px
+  border var(--color-2) solid 1px
   border-radius 0
 .login-actions
   height 25px
@@ -107,74 +106,61 @@ li.no-style
 */
 .nav
   display grid
-  grid-template-columns 10px auto 10px
+  grid-template-columns 80px auto 80px
   grid-template-rows 75px
+  color var(--color-2)
+  text-decoration none
+  li
+    float left
+  width 100%
+  height 75px
+  position relative
+  background rgba(0,0,0,0.2)
+  line-height normal
+  text-align center
   @media only screen and (min-width: 600px)
-    display grid
     grid-template-columns 280px auto 280px
     grid-template-rows 75px
-    color #fff
-    text-decoration none
-    li
-      float left
-      list-style-type none
-    width 100%
-    height 75px
-    position relative
-    background #212121
-    line-height normal
-    text-align center
 .nav-list
-  display none
-  @media only screen and (min-width: 600px)
-    display block
-    grid-column-start 3
-    grid-column-end 3
-    grid-row-start 1
-    grid-row-end 1
-    justify-self right
-    align-self center
-.nav-list-dropdown
-  display none
-  position absolute
-  min-width 160px
-  padding 5px 10px
-  z-index 5
+  display block
+  grid-column 3
+  grid-row 1
+  justify-self right
+  align-self center
+  list-style-type none
+  padding 0
+  li
+    float left
 .nav-item
   padding-right 10px
-  li
-    width auto
-  //display none
+
 .logo
   grid-column 2
   grid-row 1
   width 75px
   justify-self center
   align-self center
-.webring
-  height 25px
-  margin-top -3px
-a:hover .webring
-  filter invert(.5) sepia(1) saturate(5)
-  -o-transition .2s
-  -ms-transition .2s
-  -moz-transition .2s
-  -webkit-transition .2s
-  transition .2s
-.nav form 
+
+.nav form
   justify-self left
   align-self center
+
 .search
-  width 125px
+  width 70px
   height 30px
-  margin-left 15px
-  border 1px solid #666
-  background #1b1819
-  color #EEE
-  border-radius 3px
+  margin-left 10px
+  border none
+  background #EEE
+  color #212121
+  border-radius 5px
   text-indent 5px
+  transition 0.2s
+.search:focus
+  width 115px
+  transition 0.5s
 .search::placeholder
   text-align left
+  color black
 
 /*
   Site Layout
@@ -193,7 +179,7 @@ a:hover .webring
     padding-bottom 40px
 
 .content
-  width 80%
+  width 85%
   grid-column 2
   grid-row 1
   justify-self center
@@ -208,34 +194,27 @@ a:hover .webring
 /*
   Wiki
 */
-.wiki-index-grid { 
+.wiki-index-grid
   display grid!important
-  grid-template-columns 50% 50%
+  //grid-template-columns 50% 50%
   grid-template-rows auto
   margin 5px 5px 0 0
   display inline-block
-  top 0 
-}
-.wiki-index-projects {
+  top 0
+
+.wiki-index-projects
   grid-column-start 1
-  grid-column-end 1
-  grid-row-start 1
-  grid-row-end 1
-  justify-self center
-  
-}
-.wiki-index-self {
-  grid-column-start 2
   grid-column-end 2
   grid-row-start 1
   grid-row-end 1
   justify-self center
-  
-}
-.wiki-index-grid ul { list-style-type:none; padding:2px; }
-.wiki-latest-project { 
+
+.wiki-index-grid ul
+  list-style-type none
+  padding 2px
+
+.wiki-latest-project
   border-bottom 2px solid #EEE
-}
 
 .wiki-header
   img
@@ -370,6 +349,9 @@ li.w-p-s-item
   width 100%
   border-radius 5px
   padding 5px 10px
+.half
+  width 50%
+  margin 5px
 .avatar
   padding 24px
   grid-column 2
@@ -384,19 +366,9 @@ li.w-p-s-item
     margin 0 auto
     -webkit-filter grayscale(70%)
     filter grayscale(70%)
-    -o-transition .2s
-    -ms-transition .2s
-    -moz-transition .2s
-    -webkit-transition .2s
     transition .2s
   img:hover
     border-radius 48px 230px 48px 230px
-    -webkit-filter grayscale(0%)
-    filter grayscale(0%)
-    -o-transition .2s
-    -ms-transition .2s
-    -moz-transition .2s
-    -webkit-transition .2s
     transition .2s
   @media only screen and (max-width: 1000px)
     img
@@ -416,13 +388,32 @@ footer
   position absolute
   bottom 0
   right 0
-  background-color #2D2D2D
+  background-color #1D1D1D
   color #999999
   text-align center
-  font-size 12px
+  font-size 0.8em
   float left
-  a:link,a:active, a:hover, a:visited
+  a:link, a:active, a:hover, a:visited
     color #999999
+
+  a.icon
+    width 25px
+    height 25px
+    margin-right 5px
+    filter invert()
+    background-size cover
+    background-position center center
+    display inline-block
+    float right
+  a.icon:hover
+    filter invert(72%) sepia(71%) saturate(752%) hue-rotate(353deg) brightness(103%) contrast(103%)
+  /* Link icons */
+  a.icon.merveilles
+    background-image url(/images/icons/merveilles.svg)
+    background-size 35px
+  a.icon.webring
+    background-image url(/images/icons/webring.svg)
+
 .footer-licence
   grid-column-start 1
   grid-column-end 1
@@ -438,7 +429,7 @@ footer
   grid-row-end 1
   justify-self center
   align-self center
-.footer-right
+.footer-links
   grid-column-start 3
   grid-column-end 3
   grid-row-start 1
@@ -446,3 +437,65 @@ footer
   justify-self right
   align-self center
   padding-right 10px
+
+/*
+  Fonts
+*/
+@font-face
+  font-family BattalionMono
+  src url(/fonts/battalion/BattalionMono-Regular.woff) format('woff'),
+      url(/fonts/battalion/BattalionMono-Regular.woff2) format('woff2'),
+      url(/fonts/battalion/BattalionMono-Regular.eot) format('eot')
+
+@font-face
+  font-family SpaceGrotesk
+  src url(/fonts/spacegrotesk/SpaceGrotesk-Regular.woff) format('woff'),
+      url(/fonts/spacegrotesk/SpaceGrotesk-Regular.woff) format('woff2')
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon/icomoon.eot?o41ald');
+  src:  url('/fonts/icomoon/icomoon.eot?o41ald#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon/icomoon.ttf?o41ald') format('truetype'),
+    url('/fonts/icomoon/icomoon.woff?o41ald') format('woff'),
+    url('/fonts/icomoon/icomoon.svg?o41ald#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevrons-up:before {
+  content: "\e901";
+}
+.icon-chevrons-right:before {
+  content: "\e902";
+}
+.icon-chevrons-left:before {
+  content: "\e903";
+}
+.icon-chevrons-down:before {
+  content: "\e904";
+}
+.icon-book:before {
+  content: "\e905";
+}
+.icon-tablet:before {
+  content: "\e906";
+}
+.icon-headphones:before {
+  content: "\e900";
+}

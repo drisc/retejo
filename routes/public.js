@@ -40,6 +40,8 @@ router.get('/wiki/:wikiItem/', function(req, res) {
     res.render('wiki/photography',{title: 'Wiki | Photography',url: url});
   else if(req.originalUrl == '/wiki/goals')
     res.render('wiki/goals',{title: 'Wiki | Goals',url: url});
+  else if(req.originalUrl == '/wiki/alchemist')
+    res.render('wiki/alchemist',{title: 'Wiki | Alchemist',url: url});
 });
 
 router.get('/systems/:systemItem', function(req, res) {
@@ -49,13 +51,13 @@ router.get('/systems/:systemItem', function(req, res) {
 });
 
 // About
-router.get('/about', function(req, res) {
-  res.render('about', {title: 'About'});
+router.get('/self', function(req, res) {
+  res.render('about', {title: 'Self'});
 });
 
 //Robots
 router.get('/robots.txt', function(req, res) {
-  res.type('text/plain')
+  res.type('text/plain');
   res.send("User-agent: *\nDisallow: ");
 });
 
