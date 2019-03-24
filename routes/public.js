@@ -36,8 +36,6 @@ router.get('/wiki/:wikiItem/', function(req, res) {
     res.render('wiki/procul',{title: 'Wiki | Procul',url: url});
   else if(req.originalUrl == '/wiki/bookmarks')
     res.render('wiki/bookmarks',{title: 'Wiki | Bookmarks',url: url});
-  else if(req.originalUrl == '/wiki/photography')
-    res.render('wiki/photography',{title: 'Wiki | Photography',url: url});
   else if(req.originalUrl == '/wiki/goals')
     res.render('wiki/goals',{title: 'Wiki | Goals',url: url});
   else if(req.originalUrl == '/wiki/alchemist')
