@@ -20,7 +20,7 @@ router.get('/wiki', function(req, res) {
 });
 router.get('/wiki/:wikiItem/', function(req, res) {
   var url = req.protocol + '://' + req.get('host') + req.originalUrl;
-  if(req.originalUrl == '/wiki/libsis')
+  if(req.originalUrl == '/wiki/library')
     res.render('wiki/libsis',{title: 'Wiki | Reading List',url: url});
   else if(req.originalUrl == '/wiki/straal')
     res.render('wiki/straal',{title: 'Wiki | Straal',url: url});
@@ -40,6 +40,8 @@ router.get('/wiki/:wikiItem/', function(req, res) {
     res.render('wiki/goals',{title: 'Wiki | Goals',url: url});
   else if(req.originalUrl == '/wiki/alchemist')
     res.render('wiki/alchemist',{title: 'Wiki | Alchemist',url: url});
+  else if(req.originalUrl == '/wiki/velo')
+    res.render('wiki/velo',{title: 'Wiki | Velo',url: url});
 });
 
 router.get('/systems/:systemItem', function(req, res) {
