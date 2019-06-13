@@ -1,0 +1,39 @@
+extends ../templates/layout
+
+block content
+  .content
+    div.wiki-project-status
+      ul.w-p-s-list
+        li.w-p-s-item
+          span VER&nbsp;&bullet;&nbsp;
+          span 0.0.1
+        li.w-p-s-item
+          span SRC&nbsp;&bullet;&nbsp;
+            a(href='https://github.com/drisc/velo' class='outbound')
+              span GIT
+        li.w-p-s-item
+          span STATUS&nbsp;&bullet;&nbsp;
+          span Design
+    div
+      h1 Velo
+      .under-title
+        span Bike Computer &amp; Tracker
+      span Velo is a small screen with a built in GPS chip, powered by an ESP-12F.
+    div
+      h2 Hardware
+      h3 Ai-Thinker ESP-12F
+      p The heart of most ESP8266 Huzzah breakouts, it has on board WiFi and 4MB storage for user programs. It can be programmed with the Arduino IDE.
+      h3 Quectel L80-M39 GPS Module
+      p A low-power, surface mountable GPS module. It is capable of polling satellites at 10Hz but this project only requests the bikes position once every 10 seconds.
+      h3 TS4056
+      p The Li-Po charging IC, used in conjunction with an over-drain protection IC to safely charge and use the battery.
+      h3 Generic ST7789 IPS Screen
+      p A small 240x240 pixel IPS display, I'd prefer OLED for power reasons but there is a dedicated BLK pin on the breakout so it is trivial to power it off when not in use.
+      p All of these components are mounted on a custom PCB and housed in a 3D printed case. The device then sits in the middle of the handlebars.
+    hr
+    div
+      h2 Software
+      h4 On Device
+      p All on device code is C++, uploaded via the Arduino IDE. The code is light and boots in seconds, GPS lock takes around a minute due to the lack of an external antenna.
+      h4 Base Station
+      p When the device is on charge the WiFi activates, searches for the Base Station which is a Raspberry Pi W running an HTTP server, and dumps it's logs in JSON format to a file ready to be processed. A route map is constructed with the GPS data and displayed using OpenStreetMaps. Stats such as average/top speed and estimated calories burned are also shown.
