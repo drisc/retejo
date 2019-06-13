@@ -21,7 +21,7 @@ router.get('/wiki', function(req, res) {
 router.get('/wiki/:wikiItem/', function(req, res) {
   var url = req.protocol + '://' + req.get('host') + req.originalUrl;
   if(req.originalUrl == '/wiki/library')
-    res.render('wiki/libsis',{title: 'Wiki | Reading List',url: url});
+    res.render('wiki/library',{title: 'Wiki | Reading List',url: url});
   else if(req.originalUrl == '/wiki/straal')
     res.render('wiki/straal',{title: 'Wiki | Straal',url: url});
   else if(req.originalUrl == '/wiki/humes')
