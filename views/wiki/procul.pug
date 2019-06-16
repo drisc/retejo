@@ -8,14 +8,20 @@ block content
       ul.w-p-s-list
         li.w-p-s-item
           span VER&nbsp;&bullet;&nbsp; 
-          span 0.0.1
+          span 0.2.0
         li.w-p-s-item
           span STATUS&nbsp;&bullet;&nbsp; 
-          span Research
+          span InDev
     div
       h1 Procul
       .under-title
         span Terminal Mastodon Client
       p Procul is an idea I've had floating around in my head for a while now. A small light CLI Mastodon client, capable of displaying links to photos and rendering the alt-text that is included with pictures for accessability, have a seperate column for favs/boost/replies and be nice to look at.
 
-      p I'm hoping to use it as my first big project in Rust.
+    hr
+    div
+      h2 Current State
+      p No TUI yet, interaction is done via readline.
+      p Program is able to post to the timeline both publicly and unlisted. Fetching the timeline works but it returns JSON which need to be parsed and formatted.
+
+      
