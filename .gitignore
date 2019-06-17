@@ -1,6 +1,7 @@
 # files
 .DS_Store
 public/stylesheets/style.css
+package-lock.json
 # folders
 disk-cache
 node_modules
