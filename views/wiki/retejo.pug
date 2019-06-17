@@ -2,20 +2,18 @@ extends ../templates/layout
 
 block content
   .content
-    div.wiki-header
+    .wiki-header
       img(src='/images/icons/wiki/retejo.svg')
-    //TODO: Make the status bar a mixin and pull data for projects from Arkivo
-    div.wiki-project-status
+    .wiki-project-status
       ul.w-p-s-list
         li.w-p-s-item
           span VER&nbsp;&bullet;&nbsp;
           span 0.0.3
         li.w-p-s-item
-          span SRC&nbsp;&bullet;&nbsp;
           a(href='https://github.com/drisc/retejo' class='outbound')
-              span GIT
+            span GIT
         li.w-p-s-item
-          span STATUS&nbsp;&bullet;&nbsp; 
+          span STATUS&nbsp;&bullet;&nbsp;
           span InDev
     div
       h1 Retejo
@@ -29,8 +27,7 @@ block content
     div
       h2 Externals
       p This site uses and builds upon several external projects, below is a list of things being used along with their creators. Go check them out!
-      
+
       ul(style='list-style:none; padding:0;')
         li Battalion Mono - <a class='outbound' href='https://craze.co.uk'>Rutherford Craze</a>
         li Tablatal - <a class='outbound' href='https://wiki.xxiivv.com/'>Devine Lu Linvega</a>
-
