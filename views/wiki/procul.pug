@@ -7,10 +7,13 @@ block content
     .wiki-project-status
       ul.w-p-s-list
         li.w-p-s-item
-          span VER&nbsp;&bullet;&nbsp; 
+          span VER&nbsp;&bullet;&nbsp;
           span 0.2.0
         li.w-p-s-item
-          span STATUS&nbsp;&bullet;&nbsp; 
+          a(href='https://github.com/drisc/procul' class='outbound')
+            span GIT
+        li.w-p-s-item
+          span STATUS&nbsp;&bullet;&nbsp;
           span InDev
     div
       h1 Procul
@@ -23,5 +26,3 @@ block content
       h2 Current State
       p No TUI yet, interaction is done via readline.
       p Program is able to post to the timeline both publicly and unlisted. Fetching the timeline works but it returns JSON which need to be parsed and formatted.
-
-      
