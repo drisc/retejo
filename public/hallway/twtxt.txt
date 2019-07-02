@@ -1,3 +1,4 @@
+2019-07-02T23:53:19+00:00	/meta Will the list tail off once the number of entries reaches a certain number or will it be readable in perpetuity?
 2019-07-02T02:23:56+00:00	Maybe to allow #tag discovery you could add it as a alt-tag when users hover over the display name? I haven't been able to use #drisc or #devine to highlight other users, #rho works though.
 2019-07-02T02:05:54+00:00	I don't mind having the full name on here since it's what I put on the webring.
 2019-07-02T01:51:48+00:00	Thanks for the fix @<Devine https://wiki.xxiivv.com/twtxt.txt>!
