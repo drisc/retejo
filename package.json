@@ -19,8 +19,7 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "stylus": "0.54.5",
-    "url": "^0.11.0",
-    "cors": "2.8.5"
+    "url": "^0.11.0"
   },
   "scripts": {
     "start": "node retejo.js",

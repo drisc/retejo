@@ -6,15 +6,12 @@ var express      = require('express'),
     httpError    = require('http-errors'),
     errorHandler = require('errorhandler'),
     bodyParser   = require('body-parser'),
-    cookieParser = require('cookie-parser'),
-    cors         = require('cors');
+    cookieParser = require('cookie-parser');
 
 var publicRouter  = require('./routes/public'),
     privateRouter = require('./routes/private');
 
 var retejo = express();
-
-retejo.use(cors());
 
 // App config
 retejo.set('port', process.env.PORT || 3000);
