@@ -4,7 +4,7 @@ function afiur () {
   const origin = Date.UTC(1994,10,3)
   const current = new Date().getTime()
   const trueDays = ((current - origin + 4.32e7) / 8.64e7).toFixed(0)
-  
+
   const decimalStandard = (trueDays / 400).toFixed(4)
 
   return decimalStandard
