@@ -31,9 +31,6 @@ retejo.get('/:section', publicRouter);
 retejo.get('/:section/:sectionItem', publicRouter);
 retejo.get('/about', publicRouter);
 
-// Private Routes
-retejo.get('/login', privateRouter);
-
 // Page Renderer
 retejo.set('views', path.join(__dirname, 'views'));
 retejo.set('view engine', 'pug');
