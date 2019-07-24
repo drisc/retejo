@@ -8,8 +8,7 @@ var express      = require('express'),
     bodyParser   = require('body-parser'),
     cookieParser = require('cookie-parser');
 
-var publicRouter  = require('./routes/public'),
-    privateRouter = require('./routes/private');
+var publicRouter  = require('./routes/public');
 
 var retejo = express();
 
