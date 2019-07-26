@@ -18,26 +18,42 @@ block content
     div
       h1 Humes
       .under-title
-        span Environmental Sensors &amp; Controls
+        span A data driven, mesh networked home automation project
       span Humes is a set of programs and hardware designed to run as a distributed environment monitor and control system.
+    hr
     div
-      h2 Computation Nodes
-      p A Raspberry Pi Zero W which acts as a hub for the sensors in the area, running a program which saves data to an <a class='outbound' href='https://ipfs.io'>IPFS</a> drive. This can be accessed from any node. The <a href='#OES'>OES</a> data is uploaded to WeatherUnderground to help inform conditions for people in the area.
-      p Each node can run via a standard WiFi network or run in Distributed Mesh Mode using only one Node to upload data to the Internet. The Mesh will accept commands from physical switches on the Node itself or via remote switches connected to the DMM. The control API will be exposed so creating desktop or web apps to automate tasks will also be possible.
-      h4 Distributed Mesh Mode
-      p A protocol which allows devices running the same software to communicate with each other without the need for a central routing device. Devices can be chained to pass data down to the nearest computation node where it will be added to the <a class='outbound' href='https://ipfs.io'>IPFS</a> drive and distributed to the other Computation Nodes.
-      p Example:&nbsp;OES&nbsp;--&gt;&nbsp;IES&nbsp;--&gt;&nbsp;Computation Node
+      h2 The Mesh
+      
+      h4 Hub
+      p A Raspberry Pi Zero W acts as a Hub Node for the devices in the area and can save data to an <a class='outbound' href='https://ipfs.io'>IPFS</a> drive. This can be accessed from any Hub and used to update devices which are on seperate mesh networks.
+      
+      h4 Shard
+      p Shards are based around EPS-12F WiFi boards, they are Arduino-compatible which makes them easy to program. Depending on the software loaded the Shards can perform a variety of tasks which are detailed below. Every Shard is able to join a Mesh network to send and recive data from other Shards.
+
+      h4 Mesh Mode
+      p Shards are flashed with a program which allows devices to communicate with each other without the need for a central routing device.
+      p Each Shard can run in Mesh Mode and pass data along to a hub to be uploaded to the IPFS drive. The Mesh will accept commands from physical switches on a Hub or via Remotes on the Mesh. An API will be exposed to allow desktop or web apps to create and control tasks as well as access the admin console.
+
+      p Example:&nbsp;OES&nbsp;<span class='icon-chevrons-right'></span>&nbsp;IES&nbsp;<span class='icon-chevrons-right'>&nbsp;Hub
     div
       h2 Shards
-      h3(style='color: #FD2') Testing
-      h3(id='OES') Outdoor Environment Sensor
-      p A small circuit board holding an ESP8266 with a DHT22, TLS2165, BMP180 and a raindrop sensor.&nbsp; All components housed in a small enclosure and placed outside, using a solar panel and on-board battery for power.
-      h3 Indoor Environment Sensor
-      p A smaller version of the OES without the light, pressure or rain sensors which measures room temp and includes an air particulate and smoke sensor.
-      h3 Power Switches
-      p Small relay switches which can be controlled with either <a class='outbound' href='https://en.wikipedia.org/wiki/Power-line_communication'>PLC</a> or DMM. These can be added to existing devices such as lamps and fans or used as the base for building an entirely new piece of controllable equipment.
+
+      h3(id='OES') OES | Outdoor Environment Sensor
+      <span class='feature-testing'>Testing</span>
+      p A small circuit board holding an ESP8266 with a DHT22, TLS2165, BMP180 and a raindrop sensor.&nbsp; All components housed in a small enclosure and placed outside, using a solar panel and on-board battery for power. <a href='#OES'>OES</a> data is uploaded to OpenWeatherMap to help with weather station coverage.
+
+      h3 IES | Indoor Environment Sensor
+      <span class='feature-testing'>Testing</span>
+      p While similar to the OES, this board removes the TLS2165 and MH-Raindrop Detector and gains the MQ135 Air Quality sensor. Information for each room can be entered on the admin page of any Hub.
+
+      h3 Remote | Data Controlled Switches
+      <span class='feature-testing'>Testing</span>
+      p Remotes contain all the functions needed to interface with the Mesh and activate/deactivate equipment. They can be hidden inside the body of a device to toggle power and forward basic commands, provided the device allows serial communication.
       
-      h3(style='color: #DD5634') Planned
+    div
+      h2 Features
+
       h3 Automated Activation
-      p Have power switches publish tags such as 'Lights' or 'Fan' and allow automatic activation based on time of day or output from another shard. For example the fan could be turned on via an IES when the temperature reaches a threshold.
+      <span class='feature-planned'>Planned</span>
+      p Have remotes publish tags such as 'Lights' or 'Fan' and allow automatic activation based on time of day or output from another Shard. For example a fan could be turned on when a IES detects that the temperature is too high, or lights could be turned on when an OES detects that the light level has dropped below a certain point.
       
