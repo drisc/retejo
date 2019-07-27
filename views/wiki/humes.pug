@@ -7,14 +7,11 @@ block content
     .wiki-project-status
       ul.w-p-s-list
         li.w-p-s-item
-          span VER&nbsp;&bullet;&nbsp;
+          span Version&nbsp;&bullet;&nbsp;
           span 0.0.5
         li.w-p-s-item
           a(href='https://github.com/drisc/humes' class='outbound')
-            span GIT
-        li.w-p-s-item
-          span STATUS&nbsp;&bullet;&nbsp;
-          span InDev
+            span Source
     div
       h1 Humes
       .under-title
@@ -40,11 +37,11 @@ block content
 
       h3(id='OES') OES | Outdoor Environment Sensor
       <span class='feature-testing'>Testing</span>
-      p A small circuit board holding an ESP8266 with a DHT22, TLS2165, BMP180 and a raindrop sensor.&nbsp; All components housed in a small enclosure and placed outside, using a solar panel and on-board battery for power. <a href='#OES'>OES</a> data is uploaded to OpenWeatherMap to help with weather station coverage.
+      p A small circuitboard holding an ESP-12F with a DHT22, TLS2165, BMP180 and MH-Raindrop Detector. All the components housed in a small enclosure and placed outside with a solar panel and on-board battery. <a href='#OES'>OES</a> data is uploaded to OpenWeatherMap to help with weather station coverage and copied to an IPFS drive to inform Remotes on other meshes.
 
       h3 IES | Indoor Environment Sensor
       <span class='feature-testing'>Testing</span>
-      p While similar to the OES, this board removes the TLS2165 and MH-Raindrop Detector and gains the MQ135 Air Quality sensor. Information for each room can be entered on the admin page of any Hub.
+      p While similar to the OES, this board removes the TLS2165 and MH-Raindrop Detector and gains the MQ-2 Gas sensor. Information for each room can be entered on the admin page of any Hub.
 
       h3 Remote | Data Controlled Switches
       <span class='feature-testing'>Testing</span>
