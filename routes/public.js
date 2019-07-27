@@ -42,6 +42,10 @@ router.get('/wiki/:wikiItem/', function(req, res) {
     res.render('wiki/alchemist',{title: 'Wiki | Alchemist',url: url});
   else if(req.originalUrl == '/wiki/velo')
     res.render('wiki/velo',{title: 'Wiki | Velo',url: url});
+  else if(req.originalUrl == '/wiki/photography')
+    res.render('wiki/photography',{title: 'Wiki | Photography',url: url});
+  else if(req.originalUrl == '/wiki/tools')
+    res.render('wiki/tools',{title: 'Wiki | Tools',url: url});
 });
 
 router.get('/systems/:systemItem', function(req, res) {
