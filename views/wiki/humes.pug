@@ -36,21 +36,21 @@ block content
       h2 Shards
 
       h3(id='OES') OES | Outdoor Environment Sensor
-      <span class='feature-testing'>Testing</span>
+      span.feature-testing Testing
       p A small circuitboard holding an ESP-12F with a DHT22, TLS2165, BMP180 and MH-Raindrop Detector. All the components housed in a small enclosure and placed outside with a solar panel and on-board battery. <a href='#OES'>OES</a> data is uploaded to OpenWeatherMap to help with weather station coverage and copied to an IPFS drive to inform Remotes on other meshes.
 
       h3 IES | Indoor Environment Sensor
-      <span class='feature-testing'>Testing</span>
+      span.feature-testing Testing
       p While similar to the OES, this board removes the TLS2165 and MH-Raindrop Detector and gains the MQ-2 Gas sensor. Information for each room can be entered on the admin page of any Hub.
 
       h3 Remote | Data Controlled Switches
-      <span class='feature-testing'>Testing</span>
+      span.feature-testing Testing
       p Remotes contain all the functions needed to interface with the Mesh and activate/deactivate equipment. They can be hidden inside the body of a device to toggle power and forward basic commands, provided the device allows serial communication.
       
     div
       h2 Features
 
       h3 Automated Activation
-      <span class='feature-planned'>Planned</span>
+      span.feature-planned Planned
       p Have remotes publish tags such as 'Lights' or 'Fan' and allow automatic activation based on time of day or output from another Shard. For example a fan could be turned on when a IES detects that the temperature is too high, or lights could be turned on when an OES detects that the light level has dropped below a certain point.
       
