@@ -20,10 +20,10 @@ block content
     hr
     div
       h2 The Mesh
-      
+
       h4 Hub
       p A Raspberry Pi Zero W acts as a Hub Node for the devices in the area and can save data to an <a class='outbound' href='https://ipfs.io'>IPFS</a> drive. This can be accessed from any Hub and used to update devices which are on seperate mesh networks.
-      
+
       h4 Shard
       p Shards are based around EPS-12F WiFi boards, they are Arduino-compatible which makes them easy to program. Depending on the software loaded the Shards can perform a variety of tasks which are detailed below. Every Shard is able to join a Mesh network to send and recive data from other Shards.
 
@@ -35,22 +35,21 @@ block content
     div
       h2 Shards
 
-      h3(id='OES') OES | Outdoor Environment Sensor
+      h3(id='oes') OES | Outdoor Environment Sensor
       span.feature-testing Testing
-      p A small circuit board holding an ESP-12F with a DHT22, TLS2165, BMP180 and MH-Raindrop Detector. All the components housed in a small enclosure and placed outside with a solar panel and on-board battery. <a href='#OES'>OES</a> data is uploaded to OpenWeatherMap to help with weather station coverage and copied to an IPFS drive to inform Remotes on other meshes.
+      p A small circuit board holding an ESP-12F with a BME680 sensor, a TSL2591 Light sensor and a Raindrop Detector. All the components are housed in a small enclosure and placed outside with a solar panel and on-board battery. <a href='#oes'>OES</a> data is uploaded to OpenWeatherMap to help with weather station coverage and copied to an IPFS folder to inform Remotes.
 
-      h3 IES | Indoor Environment Sensor
+      h3(id='ies') IES | Indoor Environment Sensor
       span.feature-testing Testing
-      p While similar to the OES, this board removes the TLS2165 and MH-Raindrop Detector and gains the MQ-2 Gas sensor. Information for each room can be entered on the admin page of any Hub.
+      p This board hosts a ESP-12F connected to a TCN75A Temp sensor and a CCS811 air quality sensor. The name for each room can be entered on the admin page of the Hub.
 
-      h3 Remote | Data Controlled Switches
+      h3(id='remote') Remote | Data Controlled Switches
       span.feature-testing Testing
-      p Remotes contain all the functions needed to interface with the Mesh and activate/deactivate equipment. They can be hidden inside the body of a device to toggle power and forward basic commands, provided the device allows serial communication.
-      
+      p Remotes contain an ESP-12F to interface with the Mesh and a relay to activate/deactivate equipment. They can be hidden inside the body of a device to toggle power and forward basic commands, provided the device allows serial communication.
+
     div
       h2 Features
 
       h3 Automated Activation
       span.feature-planned Planned
       p Have remotes publish tags such as 'Lights' or 'Fan' and allow automatic activation based on time of day or output from another Shard. For example a fan could be turned on when a IES detects that the temperature is too high, or lights could be turned on when an OES detects that the light level has dropped below a certain point.
-      
